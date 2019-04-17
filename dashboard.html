@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PWA: Demo</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/icon.css" rel="stylesheet">
+  <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+
+<body class="hidden-sn mdb-skin">
+
+    <!--Double navigation-->
+    <header>
+      <!-- Sidebar navigation -->
+      <div id="slide-out" class="side-nav sn-bg-4">
+        <div class="sidemenu">
+          <div class="top-wrapper">
+            <a href="dashboard.html" class="logo-container"><img src="img/i3ms-logo-white.png" alt=""></a>
+            <div class="user-info">
+              <h2>Himalaya Pagada</h2>
+              <p>Designation</p>
+            </div>
+          </div>
+          <div class="bottom-wrapper">
+            <button class="btn btn-block btn-link"><i class="icon-log-out"></i> Log Out</button>
+          </div>
+        </div>
+      </div>
+      <!--/. Sidebar navigation -->
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav py-0">
+        <!-- SideNav slide-out button -->
+        <div class="float-left ml-2 mr-4 py-2">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="icon-menu"></i></a>
+        </div>
+        <!-- Breadcrumb-->
+        <div class="breadcrumb-dn mr-auto py-2">
+          <img src="img/i3ms-logo-white.png" alt="" height="36px">
+        </div>
+        <ul class="nav navbar-nav nav-flex-icons ml-auto top-menu">
+          <li class="nav-item">
+            <a class="nav-link active" href="javascript: void(0);"><i class="fas icon-refresh"></i> <span class="clearfix d-none d-sm-inline-block">REAL TIME MONITORING</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="polling.html"><i class="far icon-line-graph"></i> <span class="clearfix d-none d-sm-inline-block">POLLING</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="route-history.html"><i class="fas icon-calendar2"></i> <span class="clearfix d-none d-sm-inline-block">ROUTE HISTORY</span></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.Navbar -->
+    </header>
+    <!--/.Double navigation-->
+  
+    <!--Main Layout-->
+    <main>
+      <div class="container-fluid">
+        <!-- <h5><strong>REALTIME MONITORING</strong></h5> -->
+        <div class="row dash-report mb-3">
+          <div class="col">
+            <div class="card text-white bg-primary">
+              <div class="card-body">
+                <p class="card-texxt">Total Vehicle</p>
+                <h1 class="text-white">43,443</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-danger">
+              <div class="card-body">
+                <p class="card-texxt">Total Vehicle</p>
+                <h1 class="text-white">43,443</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-success">
+              <div class="card-body">
+                <p class="card-texxt">Complete Transport</p>
+                <h1 class="text-white">13,443</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-dark">
+              <div class="card-body">
+                <p class="card-texxt">Vehicle Destination</p>
+                <h1 class="text-white">1,000</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-warning">
+              <div class="card-body">
+                <p class="card-texxt">Total Idles</p>
+                <h1 class="text-white">443</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header">
+            <form id="contact-form" class="form-inline" name="contact-form" action="mail.php" method="POST">
+                <div class="form-group">
+                  <label for="circle">Circle</label>
+                </div>
+                <div class="form-group mx-sm-3">
+                  <select class="form-control" id="circle">
+                    <option value="0">--Select--</option>
+                    <option value="1">BBSR</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="date" class="">Date</label>
+                </div>
+                <div class="form-group mx-sm-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control datepicker" id="date" placeholder="DD/MM/YYYY" aria-label="date" aria-describedby="date">
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="date"><i class="icon-calendar2"></i></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="vehicle" class="">Vehicle Number</label>
+                </div>
+                <div class="form-group mx-sm-3">
+                  <input type="text" class="form-control" id="vehicle" placeholder="Enter here" />
+                </div>
+                <button type="button" class="btn btn-primary btn-sm">SHOW</button>
+            </form>
+          </div>
+          <!--Google map-->
+          <div id="map-container-google-1" class="z-depth-1-half map-container" style="min-height: 350px;height: calc(100vh - 330px);">
+            <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" width="100%" height="100%" style="border:0" allowfullscreen></iframe>
+          </div>
+          <!-- <button type="button" class="btn btn-primary vehicleModal-btn">
+            Vehicle Detail
+          </button> -->
+        </div>
+      </div>
+    </main>
+    <p class="text-center copyright">All &copy; Copyright Reserved for <span id="current-year"></span></p>
+    <!--Main Layout-->
+  <!-- Modal -->
+<div class="modal fade" id="vehicleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Vehicle Detail</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-8 p-0">
+                  <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 300px">
+                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" width="100%" height="100%" style="border:0" allowfullscreen></iframe>
+                  </div>
+              </div>
+              <div class="col-sm-4">
+                <ul class="vehicle-info">
+                  <li>
+                    <p>Vehicle Number</p>
+                    <h2>OR 02 AE 1798</h2>
+                  </li>
+                  <li>
+                    <p>RC Number</p>
+                    <h2>654687435135</h2>
+                  </li>
+                  <li>
+                    <p>Driver Name</p>
+                    <h2>Raghu Ambani</h2>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+</body>
+
+</html>

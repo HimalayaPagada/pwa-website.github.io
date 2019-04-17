@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>i3MS || Polling</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/icon.css" rel="stylesheet">
+  <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+
+<body class="hidden-sn mdb-skin">
+
+    <!--Double navigation-->
+    <header>
+      <!-- Sidebar navigation -->
+      <div id="slide-out" class="side-nav sn-bg-4">
+        <div class="sidemenu">
+          <div class="top-wrapper">
+            <a href="dashboard.html" class="logo-container"><img src="img/i3ms-logo-white.png" alt=""></a>
+            <div class="user-info">
+              <h2>Himalaya Pagada</h2>
+              <p>Designation</p>
+            </div>
+          </div>
+          <div class="bottom-wrapper">
+            <button class="btn btn-block btn-link"><i class="icon-log-out"></i> Log Out</button>
+          </div>
+        </div>
+      </div>
+      <!--/. Sidebar navigation -->
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav py-0">
+        <!-- SideNav slide-out button -->
+        <div class="float-left ml-2 mr-4 py-2">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="icon-menu"></i></a>
+        </div>
+        <!-- Breadcrumb-->
+        <div class="breadcrumb-dn mr-auto py-2">
+          <img src="img/i3ms-logo-white.png" alt="" height="36px">
+        </div>
+        <ul class="nav navbar-nav nav-flex-icons ml-auto top-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html"><i class="fas icon-refresh"></i> <span class="clearfix d-none d-sm-inline-block">REAL TIME MONITORING</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="javascript: void(0);"><i class="far icon-line-graph"></i> <span class="clearfix d-none d-sm-inline-block">POLLING</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="route-history.html"><i class="fas icon-calendar2"></i> <span class="clearfix d-none d-sm-inline-block">ROUTE HISTORY</span></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.Navbar -->
+    </header>
+    <!--/.Double navigation-->
+  
+    <!--Main Layout-->
+    <main>
+      <div class="container-fluid">
+        <h5><strong>POLLING</strong></h5>
+        <div class="card mb-3">
+          <div class="card-header">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+              <!--Grid row-->
+              <div class="row align-items-end">    
+                <div class="col-md-3">
+                  <label for="circle" class="">Circle</label>
+                  <select class="form-control">
+                    <option value="0">--Select--</option>
+                    <option value="1">BBSR</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="date" class="">Date</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control datepicker" placeholder="DD/MM/YYYY" aria-label="date" id="date" aria-describedby="date">
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="date"><i class="icon-calendar2"></i></label>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-primary m-0">SHOW</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th width="25%">Circle</th>
+                  <th>No. of Vehicle</th>
+                  <th>Complete Trip</th>
+                  <th>No. of Pollings</th>
+                  <th>Out of Track</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-primary">Khorda</a>
+                </td>
+                <td>14,587</td>
+                <td>23</td>
+                <td>9</td>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-info">4</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-primary">Khorda</a>
+                </td>
+                <td>14,587</td>
+                <td>23</td>
+                <td>9</td>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-info">4</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-primary">Khorda</a>
+                </td>
+                <td>14,587</td>
+                <td>23</td>
+                <td>9</td>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-info">4</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-primary">Khorda</a>
+                </td>
+                <td>14,587</td>
+                <td>23</td>
+                <td>9</td>
+                <td>
+                  <a href="javascript: void(0);" class="pollingModal-btn badge badge-pill badge-info">4</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <p class="text-center copyright">All &copy; Copyright Reserved for <span id="current-year"></span></p>
+    <!--Main Layout-->
+  <!-- Modal -->
+<div class="modal fade" id="pollingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Polling Detail</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-hover table-striped">
+            <thead class="thead-light">
+              <tr>
+                <th width="56px">Sl. #</th>
+                <th>Vehicle No.</th>
+                <th>ePass</th>
+                <th>Device No.</th>
+                <th>Trip Status</th>
+                <th>Polling Status</th>
+                <th>Loss Polling</th>
+                <th>Line lost location</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>
+                <strong>OR 02 AE 9876</strong>
+              </td>
+              <td>2739432</td>
+              <td>DN32144</td>
+              <td><span class="badge badge-warning">Inprogress</span></td>
+              <td><span class="badge badge-success">Completed</span></td>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <strong>OR 02 AE 9876</strong>
+              </td>
+              <td>2739432</td>
+              <td>DN32144</td>
+              <td><span class="badge badge-warning">Inprogress</span></td>
+              <td><span class="badge badge-success">Completed</span></td>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <strong>OR 02 AE 9876</strong>
+              </td>
+              <td>2739432</td>
+              <td>DN32144</td>
+              <td><span class="badge badge-warning">Inprogress</span></td>
+              <td><span class="badge badge-success">Completed</span></td>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <strong>OR 02 AE 9876</strong>
+              </td>
+              <td>2739432</td>
+              <td>DN32144</td>
+              <td><span class="badge badge-warning">Inprogress</span></td>
+              <td><span class="badge badge-success">Completed</span></td>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <strong>OR 02 AE 9876</strong>
+              </td>
+              <td>2739432</td>
+              <td>DN32144</td>
+              <td><span class="badge badge-warning">Inprogress</span></td>
+              <td><span class="badge badge-success">Completed</span></td>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+</body>
+
+</html>
